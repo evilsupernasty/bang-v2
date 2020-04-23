@@ -1,0 +1,170 @@
+.bangs {
+  align-items: center;
+  display: flex;
+  font-family: monospace;
+  height: 100vh;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+}
+
+.hi {
+  height: 110px;
+  position: relative;
+  transform: translateY(25px);
+  width: 85px;
+  z-index: 1000;
+}
+
+.hand {
+  display: none;
+}
+
+.hi:hover .hand {
+  display: inline;
+}
+
+.hi:hover .arrow {
+  display: none;
+}
+
+.hi:hover ~ .bang {
+  bottom: unset;
+  left: 50%;
+  right: unset;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hi:hover ~ .bang__1 {
+  transform: translate(-51%, -50%);
+}
+
+.hi:hover ~ .bang__2 {
+  transform: translate(-49%, -50%);
+}
+
+.hi:hover ~ .bang__3 {
+  transform: translate(-50%, -52.5%);
+}
+
+.hi:hover ~ .bang__4 {
+  transform: translate(-50%, -47.5%);
+}
+
+.bang {
+  font-family: monospace;
+  font-size: 10vw;
+  font-style: italic;
+  font-weight: bold;
+  line-height: 1;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: left 500ms, top 500ms, transform 500ms;
+}
+
+.bang__1 {
+  color: rgba(0, 255, 255, 0.5);
+  left: 0%;
+  top: 0%;
+}
+
+.bang__2 {
+  color: rgba(255, 0, 255, 0.5);
+  left: 100%;
+  top: 0%;
+}
+
+.bang__3 {
+  color: rgba(255, 255, 0, 0.5);
+  left: 0%;
+  top: 100%;
+}
+
+.bang__4 {
+  left: 100%;
+  color: rgba(0, 0, 0, 0.5);
+  top: 100%;
+}
+
+.hello {
+  background: linear-gradient(rgba(255, 255, 0, 0.5), rgba(0, 255, 255, 0.5));
+  display: none;
+  height: 100vh;
+  position: absolute;
+  width: 100vw;
+  z-index: 1001;
+}
+
+.hello:target {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.bye {
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.form {
+  background: linear-gradient(rgba(255, 0, 255, 0.5), rgba(0, 0, 0, 0.5));
+  box-sizing: border-box;
+  color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  flex-direction: column;
+  font-size: 1vw;
+  height: 100%;
+  max-height: 500px;
+  max-width: 500px;
+  padding: 1rem 2rem 2rem;
+  position: relative;
+  width: 100%;
+}
+
+.label {
+  color: inherit;
+  display: block;
+  font-style: italic;
+  margin: 1rem 0 0.5rem;
+}
+
+.field {
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  box-sizing: border-box;
+  color: inherit;
+  display: block;
+  font-family: inherit;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.field:focus {
+  border-style: inset;
+  outline: none;
+}
+
+.textarea {
+  flex-grow: 1;
+  resize: none;
+}
+
+.button {
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.75);
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+
+.button:hover,
+.button:active,
+.button:focus {
+  border-style: inset;
+}
